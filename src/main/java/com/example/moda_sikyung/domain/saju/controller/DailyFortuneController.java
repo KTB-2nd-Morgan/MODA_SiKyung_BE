@@ -24,7 +24,7 @@ public class DailyFortuneController {
     @GetMapping
     public CommonResponse<DailyFortuneDTO> getDailyFortune(
             @RequestParam(required = false) LocalDate birthDate,
-            @RequestParam(required = false) LocalTime birthTime,
+            @RequestParam(required = false) String birthTime,
             @RequestParam(required = false) Gender gender
     ) {
         return CommonResponse.onSuccess(dailyFortuneService.getDailyFortune(birthDate, birthTime, gender));
