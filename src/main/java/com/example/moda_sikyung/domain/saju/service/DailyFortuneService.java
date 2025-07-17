@@ -20,7 +20,7 @@ public class DailyFortuneService {
     private final SajuService sajuService;
 //    private final SongRecommendationService songRecommendationService;
 
-    public DailyFortuneDTO getDailyFortune(LocalDate birthDate, LocalTime birthTime, Gender gender) {
+    public DailyFortuneDTO getDailyFortune(LocalDate birthDate, String birthTime, Gender gender) {
         if (birthDate == null || birthTime == null || gender == null) {
             throw new IllegalArgumentException("비로그인 사용자는 생년월일, 시간, 성별을 입력해야 합니다.");
         }

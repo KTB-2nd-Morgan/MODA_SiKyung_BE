@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.List;
 
 @Entity
@@ -23,7 +22,7 @@ public class Saju {
     private LocalDate birthDate;
 
     @Column(nullable = false)
-    private LocalTime birthTime;     // 출생 시각
+    private String birthTime;     // 출생 시각
 
     @Enumerated(EnumType.STRING)
     private Gender gender;           // 성별 (MALE, FEMALE 등)
